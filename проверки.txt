@@ -1,0 +1,13 @@
+-- Показываем строки, которые отличаются
+SELECT *
+FROM dm.dm_f101_round_f_v2 v2
+EXCEPT
+SELECT *
+FROM dm.dm_f101_round_f;
+
+
+-- Проверим лог импорта
+SELECT *
+FROM logs.etl_stdout_log
+WHERE script_name = '02_import_f101_from_csv.py'
+ORDER BY log_dt DESC;

@@ -1,0 +1,6 @@
+db:
+  dbname: postgres
+  user: postgres
+  password: Kot1234!
+  host: localhost
+  port: 5432
